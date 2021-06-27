@@ -1,6 +1,6 @@
 # WiDS Graph Algorithms Code
 
-## Workshop Information
+## Workshop information
 
 This repository contains the code for the WiDS lecture "Graph Theory for Data Science, Part II: Graph algorithms: Traversing the tree and beyond":
 
@@ -21,6 +21,8 @@ Start a jupyter notebook:
 
     $ jupyter notebook
 
+Open the python notebook `Graph_Search.ipynb`. Run every cell (you can run a cell by pressing Shift and Enter while it is selected). 
 
-* Directions for running commands
+You can change the parameters in the blocks with the comment `CHANGE HERE` to test the algorithms on different random graphs. 
+
 * Upload copy of powerpoint
