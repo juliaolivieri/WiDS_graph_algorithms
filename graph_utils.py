@@ -1,5 +1,6 @@
 from collections import defaultdict
 import matplotlib.pyplot as plt
+import matplotlib
 import networkx as nx
 import numpy as np
 plt.rcParams.update({'font.size': 16})
@@ -183,3 +184,19 @@ def call_DFS(adjacency_dict, target, start=1, current = 1, visited_dfs = [1], ba
     # if not, mark that the next vertex has been visited, and continue the algorithm from there
     visited_dfs.append(next_vertex)
     return call_DFS(adjacency_dict, target, start=start,current = next_vertex,visited_dfs = visited_dfs,backtrack = backtrack)
+
+def plot_search_palette():
+    # create legend
+    palette = dict(zip(["starting vertex","visited vertex", "target vertex", "found target"], ["dodgerblue","silver", "lightgreen","hotpink"]))
+    handles = [matplotlib.patches.Patch(color=palette[x], label=x) for x in palette.keys()]
+    plt.legend(handles=handles)
+    plt.gca().set_axis_off()
+    plt.show()
+
+def plot_kruskal_palette():
+    # create legend
+    palette = dict(zip(["edge not in MST","edge in MST"], ["black","orange"]))
+    handles = [matplotlib.patches.Patch(color=palette[x], label=x) for x in palette.keys()]
+    plt.legend(handles=handles)
+    plt.gca().set_axis_off()
+    plt.show()
