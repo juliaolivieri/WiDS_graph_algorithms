@@ -6,6 +6,46 @@ import numpy as np
 plt.rcParams.update({'font.size': 16})
 fig_size = 10
 
+
+def is_connected(adjacency_dict):
+    """Given an adjacency dictionary determine whether the graph is connected"""
+
+    # Run DFS from a vertex
+    _, _, visited = DFS(adjacency_dict, defaultdict(lambda : False), list(adjacency_dict.keys())[0])
+
+    # If DFS visits every vertex, the graph is connected; otherwise it's not
+    if len(visited) < len(adjacency_dict):
+        return False
+    return True
+
+
+def contains_cycle(adjacency_dict):
+    """Check whether a graph contains a cycle given an adjacency dictionary"""
+
+    # keep track of all unvisited vertices
+    unvisited = list(adjacency_dict.keys())
+
+    # continue until all vertices have been visited
+    while(len(unvisited) > 0):
+
+        # Run DFS from an unvisited vertex and find all vertices reachable from that vertex (a component)
+        _, _, visited = DFS(adjacency_dict, defaultdict(lambda : False), unvisited[0])
+
+        # count the number of degrees in the component
+        component_degrees = 0
+        for k, v in adjacency_dict.items():
+            if k in visited:
+                component_degrees += len([i for i in v if i in visited])
+
+        # number of degrees = 2 * number of edges
+        component_edges = component_degrees/2
+
+        # If a connected component on n vertices has n - 1 edges, it's a tree; otherwise, it has a cycle
+        if component_edges > len(visited) - 1:
+            return True
+        unvisited = [i for i in unvisited if i not in visited]
+    return False
+
 def add_edge(adjacency_dict, weights,curr_edges):
     v1 = np.random.choice(list(adjacency_dict.keys()))
     v2 = np.random.choice(list(adjacency_dict.keys()))
