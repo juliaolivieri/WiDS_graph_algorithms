@@ -8,6 +8,8 @@ Graph-based algorithms are essential for everything from tracking relationships 
 
 Previous lecture: [Graph Theory for Data Science, Part I: What is a graph and what can we do with it?](https://www.youtube.com/watch?v=KlzWjdaXYgA&list=PLHAk3jHXWpxI7fHw8m5PhrpSRpR3NIjQo&index=1)
 
+Lecturer: Julia Olivieri (jolivier@stanford.edu)
+
 ## Running the code
 
 Make sure that you have access to jupyter notebooks (instructions for installing can be found [here](https://jupyter.readthedocs.io/en/latest/install.html)).
@@ -28,6 +30,5 @@ You can change the parameters in the blocks with the comment `CHANGE HERE` to te
 ## Links mentioned in the lecture
 
 * [Proof of correctness of Kruskal's algorithm](https://en.wikipedia.org/wiki/Kruskal's_algorithm#Proof_of_correctness)
-* 
 * [Detecting a cycle with DFS](https://www.geeksforgeeks.org/detect-cycle-undirected-graph/)
 * [Video of soap solving the Steiner Tree problem](https://www.youtube.com/watch?v=PI6rAOWu-Og)

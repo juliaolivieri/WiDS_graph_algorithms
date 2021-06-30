@@ -47,6 +47,7 @@ def contains_cycle(adjacency_dict):
     return False
 
 def add_edge(adjacency_dict, weights,curr_edges):
+    """Add weighted edge to adjacency dictionary"""
     v1 = np.random.choice(list(adjacency_dict.keys()))
     v2 = np.random.choice(list(adjacency_dict.keys()))
     
@@ -60,6 +61,7 @@ def add_edge(adjacency_dict, weights,curr_edges):
     return adjacency_dict, weights, curr_edges
 
 def create_graph(num_vertices, num_edges, force_connected=True):
+    """Create weighted graph"""
     weights = {}
     adjacency_dict = {k : [] for k in range(1,num_vertices + 1)}
     curr_edges = 0
@@ -72,6 +74,7 @@ def create_graph(num_vertices, num_edges, force_connected=True):
 
 
 def draw_adj(adjacency_dict,weights=defaultdict(lambda : 1),draw_weights=False, tree = defaultdict(lambda : [])):
+    """Draw graph from adjacency dictionary; can change edge size by weight"""
     g = nx.Graph()
     for v1, val in adjacency_dict.items():
         for v2 in val:
@@ -96,6 +99,7 @@ def draw_adj(adjacency_dict,weights=defaultdict(lambda : 1),draw_weights=False, 
     plt.show()
 
 def create_search_tree(vertex_limit, poisson_param, p, seed, close_solutions):
+    """Create tree with 'true' vertices for graph traversal examples"""
     np.random.seed(seed)
     adjacency_dict = {1 : []}
     count = 1
@@ -158,6 +162,7 @@ def create_search_tree(vertex_limit, poisson_param, p, seed, close_solutions):
 
 
 def DFS(adjacency_dict, target, start = 1):
+    """Call the recursive DFS function"""
     return call_DFS(adjacency_dict, target,start=start, current = start, visited_dfs = [start])
 
 def call_DFS(adjacency_dict, target, start=1, current = 1, visited_dfs = [1], backtrack = {}):
@@ -189,6 +194,7 @@ def call_DFS(adjacency_dict, target, start=1, current = 1, visited_dfs = [1], ba
     return call_DFS(adjacency_dict, target, start=start,current = next_vertex,visited_dfs = visited_dfs,backtrack = backtrack)
 
 def plot_search_palette():
+    """Create legend for graph traversal"""
     # create legend
     palette = dict(zip(["starting vertex","visited vertex", "target vertex", "found target"], ["dodgerblue","silver", "lightgreen","hotpink"]))
     handles = [matplotlib.patches.Patch(color=palette[x], label=x) for x in palette.keys()]
@@ -197,6 +203,7 @@ def plot_search_palette():
     plt.show()
 
 def plot_kruskal_palette():
+    """Create legend for minimum spanning tree"""
     # create legend
     palette = dict(zip(["edge not in MST","edge in MST"], ["black","orange"]))
     handles = [matplotlib.patches.Patch(color=palette[x], label=x) for x in palette.keys()]
