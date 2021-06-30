@@ -12,12 +12,14 @@ Lecturer: Julia Olivieri (jolivier@stanford.edu)
 
 ## Running the code
 
-Make sure that you have access to jupyter notebooks (instructions for installing can be found [here](https://jupyter.readthedocs.io/en/latest/install.html)).
-
 Clone this repo and enter the folder:
 
     $ git clone https://github.com/juliaolivieri/WiDS_graph_algorithms.git
     $ cd WiDS_graph_algorithms/
+
+Install any missing requirements with the following command (note that this will install the Python packages numpy, matplotlib, networkx, and jupyterlab; you can create a virtual environment if you don't want to install them in your base environment):
+
+    $ pip install -r requirements.txt
 
 Start a jupyter notebook:
 
