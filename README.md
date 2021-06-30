@@ -25,4 +25,9 @@ Open the python notebook `Graph_Search.ipynb`. Run every cell (you can run a cel
 
 You can change the parameters in the blocks with the comment `CHANGE HERE` to test the algorithms on different random graphs. 
 
-* Upload copy of powerpoint
+## Links mentioned in the lecture
+
+* [Proof of correctness of Kruskal's algorithm](https://en.wikipedia.org/wiki/Kruskal's_algorithm#Proof_of_correctness)
+* 
+* [Detecting a cycle with DFS](https://www.geeksforgeeks.org/detect-cycle-undirected-graph/)
+* [Video of soap solving the Steiner Tree problem](https://www.youtube.com/watch?v=PI6rAOWu-Og)
