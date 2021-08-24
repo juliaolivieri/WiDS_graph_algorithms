@@ -6,6 +6,8 @@ This repository contains the code for the WiDS lecture "Graph Theory for Data Sc
 
 Graph-based algorithms are essential for everything from tracking relationships in social networks to finding the shortest driving distance on google maps. In this workshop we will explore some of the most useful graph algorithms, from both the breadth-first and depth-first methods for searching graphs, to Kruskal’s algorithm for finding a minimum spanning tree of a weighted graph, to approximation methods for solving the traveling salesman problem. We will use hands-on examples in python to explore the computational complexity and accuracy of these algorithms, and discuss their broader applications. 
 
+Video for this lecture: [Graph Theory for Data Science, Part II: Graph Algorithms: Traversing the tree and beyond](https://www.youtube.com/watch?v=45jNuN4DtPM&list=PLHAk3jHXWpxI7fHw8m5PhrpSRpR3NIjQo&index=3)
+
 Previous lecture: [Graph Theory for Data Science, Part I: What is a graph and what can we do with it?](https://www.youtube.com/watch?v=KlzWjdaXYgA&list=PLHAk3jHXWpxI7fHw8m5PhrpSRpR3NIjQo&index=1)
 
 Lecturer: Julia Olivieri (jolivier@stanford.edu)
